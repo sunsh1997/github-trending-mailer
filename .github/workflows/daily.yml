@@ -2,8 +2,8 @@ name: Daily GitHub Trending Email
 
 on:
   schedule:
-    # GitHub Actions uses UTC. 01:45 UTC = 09:45 Asia/Shanghai.
-    - cron: "45 1 * * *"
+    # Temporary verification schedule. Change back after confirming scheduled runs.
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
