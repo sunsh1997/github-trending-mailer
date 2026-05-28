@@ -2,22 +2,12 @@ name: Daily GitHub Trending Email
 
 on:
   schedule:
-    # Temporary diagnostic schedule. It only runs a ping job, not the email sender.
-    - cron: "*/5 * * * *"
+    # GitHub Actions uses UTC. 01:00 UTC = 09:00 Asia/Shanghai.
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 jobs:
-  schedule-ping:
-    if: github.event_name == 'schedule'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Scheduled trigger ping
-        run: |
-          echo "Scheduled workflow trigger received."
-          date -u
-
   send:
-    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: read
