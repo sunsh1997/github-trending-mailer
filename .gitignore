@@ -1,0 +1,5 @@
+.env
+mail_config.json
+smtp_password.sec
+reports/
+__pycache__/
