@@ -3,3 +3,5 @@ mail_config.json
 smtp_password.sec
 reports/
 __pycache__/
+.idea/
+send_trending_email.ps1
